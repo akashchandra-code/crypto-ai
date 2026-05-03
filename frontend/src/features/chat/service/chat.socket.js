@@ -14,7 +14,7 @@ export const useChat = () => {
   const initializeSocketConnection = (userId) => {
     console.log("INIT SOCKET USER:", userId);
     if (!socketRef.current) {
-      socketRef.current = io("https://crypto-ai-gq4m.onrender.com", { withCredentials: true,transports: ["websocket"], });
+      socketRef.current = io("https://crypto-ai-gq4m.onrender.com", { withCredentials: true,transports: ["websocket"],autoConnect: true,forceNew: true, });
 
       socketRef.current.on("connect", () => {
   console.log("✅ SOCKET CONNECTED");
