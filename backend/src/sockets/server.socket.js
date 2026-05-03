@@ -5,7 +5,7 @@ let io;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: ["http://localhost:5173", "https://crypto-ai-gq4m.onrender.com"],
+      origin: ["http://localhost:8000", "https://crypto-ai-gq4m.onrender.com"],
       methods: ["GET", "POST"],
       credentials: true,
     },
