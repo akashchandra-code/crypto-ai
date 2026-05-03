@@ -19,7 +19,7 @@ export const useChat = () => {
   // ✅ INIT SOCKET (ONLY ONCE)
   const initializeSocketConnection = () => {
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:8000", {
+      socketRef.current = io("https://crypto-ai-gq4m.onrender.com", {
         withCredentials: true,
       });
 
